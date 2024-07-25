@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> NUTAN LAB 2.5 Form Validation</title>
+    <link rel="stylesheet" href="register.css">
+    <link rel="stylesheet" href="footer.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Registration Form</h1>
+        <form action="/submit" method="post">
+            <div class="form-group">
+                <label for="firstName">First Name</label>
+                <input type="text" id="firstName" name="firstName" required>
+            </div>
+            <div class="form-group">
+                <label for="lastName">Last Name</label>
+                <input type="text" id="lastName" name="lastName" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <div class="form-group">
+                <label for="confirmPassword">Confirm Password</label>
+                <input type="password" id="confirmPassword" name="confirmPassword" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" required>
+            </div>
+            <div class="form-group">
+                <label for="address">Address</label>
+                <textarea id="address" name="address" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="gender">Gender</label>
+                <select id="gender" name="gender" required>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="dob">Date of Birth</label>
+                <input type="date" id="dob" name="dob" required>
+            </div>
+            <div class="form-group">
+                <button type="submit">Register</button>
+            </div>
+        </form>
+    </div>
+</body>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const form = document.querySelector('form');
+        form.addEventListener('submit', function (event) {
+            // Prevent form submission
+            event.preventDefault();
+
+            // Get form values
+            const firstName = document.getElementById('firstName').value.trim();
+            const lastName = document.getElementById('lastName').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const password = document.getElementById('password').value;
+            const confirmPassword = document.getElementById('confirmPassword').value;
+            const phone = document.getElementById('phone').value.trim();
+            const address = document.getElementById('address').value.trim();
+            const gender = document.getElementById('gender').value;
+            const dob = document.getElementById('dob').value;
+
+            let isValid = true;
+            let errorMessage = '';
+
+            // Check if all fields are filled
+            if (!firstName || !lastName || !email || !password || !confirmPassword || !phone || !address || !gender || !dob) {
+                isValid = false;
+                errorMessage += 'All fields are required.\n';
+            }
+
+            // Check if passwords match
+            if (password !== confirmPassword) {
+                isValid = false;
+                errorMessage += 'Passwords do not match.\n';
+            }
+
+            // Check email format
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailPattern.test(email)) {
+                isValid = false;
+                errorMessage += 'Invalid email format.\n';
+            }
+
+            // Check phone number format (simple validation)
+            const phonePattern = /^[0-9]{10}$/;
+            if (!phonePattern.test(phone)) {
+                isValid = false;
+                errorMessage += 'Phone number should be 10 digits.\n';
+            }
+
+            // Display error message or submit form
+            if (!isValid) {
+                alert(errorMessage);
+            } else {
+                form.submit(); // Submit the form if all validations pass
+            }
+        });
+    });
+</script>
+<footer>
+    Nutan Gyawali
+</footer>
+
+
+</html>

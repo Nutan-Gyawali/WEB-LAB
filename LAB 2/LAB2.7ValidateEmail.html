@@ -1,0 +1,82 @@
+<html>
+
+<head>
+    <title>
+        NUTAN LAB 2.7 Validate Email Address
+    </title>
+    <link rel="stylesheet" href="footer.css">
+    <style>
+        body {
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        #emails {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-right: 10px;
+            margin-left: 10px;
+        }
+
+        #results {
+            margin-top: 20px;
+            font-size: 18px;
+            display: block;
+
+        }
+
+        button {
+            margin-top: 10px;
+        }
+    </style>
+
+
+</head>
+
+<body>
+
+    ENTER YOUR EMAIL:
+    <div id="emails">
+        <input name="email" id="email" type="text">
+        <button type="submit" id="submit" onclick="validateEmail()">SUBMIT</button>
+    </div>
+    <div id="results">
+
+    </div>
+    <footer>
+        Nutan Gyawali
+    </footer>
+
+
+</body>
+<script>
+    function validateEmail() {
+        let email = document.getElementById("email").value;
+        const emailPattern = /^[a-zA-Z0-9._%+-]+@(gmail\.com|hotmail\.com)$/;
+
+        var isValid = emailPattern.test(email);
+
+        if (isValid) {
+            document.getElementById("results").innerHTML = "GOOD JOB 😊"
+        }
+
+        else {
+            document.getElementById("results").innerHTML = "Enter a Valid Email 😡"
+
+        }
+    }
+
+
+</script>
+
+</html>

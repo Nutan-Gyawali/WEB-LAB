@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NUTAN LAB 2.6 Array and Loop</title>
+    <link rel="stylesheet" href="footer.css">
+</head>
+
+<body>
+    <footer>
+        Nutan Gyawali
+    </footer>
+</body>
+<script>
+    let cars = ["Mercedes", "BMW", "Chevrolet", "Ford", "Rolls Royce"];
+    let NewCar = [];
+    cars.forEach(append);
+
+    function append(item) {
+        NewCar.push(item + " is a good car ");
+    }
+    document.write("The original array is <br>" + cars + "<br>");
+    document.write("<br>The new array is <br>" + NewCar + "<br>");
+
+    console.log(cars);
+    console.log(NewCar);
+</script>
+
+</html>
