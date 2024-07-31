@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NUTAN LAB2.11 Image Slider</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+
+        .slider {
+            position: relative;
+            max-width: 600px;
+        }
+
+        .slider img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            border: none;
+            color: white;
+            font-size: 18px;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        button.prev {
+            left: 0;
+        }
+
+        button.next {
+            right: 0;
+        }
+
+        button:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="slider">
+        <button class="prev" onclick="prevImage()">&#10094;</button>
+        <img id="slider-image" src="image1.jpg" alt="Slider Image">
+        <button class="next" onclick="nextImage()">&#10095;</button>
+    </div>
+    <script>
+        let currentIndex = 0;
+        const images = ["image1.jpg", "image2.jpg", "image3.jpg", "image3.jpg"]; // Replace these with your actual image file names
+        const sliderImage = document.getElementById("slider-image");
+
+        function showImage(index) {
+            sliderImage.src = images[index];
+        }
+
+        function prevImage() {
+            currentIndex = (currentIndex > 0) ? currentIndex - 1 : images.length - 1;
+            showImage(currentIndex);
+        }
+
+        function nextImage() {
+            currentIndex = (currentIndex < images.length - 1) ? currentIndex + 1 : 0;
+            showImage(currentIndex);
+        }
+
+    </script>
+</body>
+
+</html>

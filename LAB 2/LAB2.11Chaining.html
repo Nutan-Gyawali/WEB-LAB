@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NUTAN LAB 2.11 SlideUp SlideDown</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        #box {
+            width: 200px;
+            height: 200px;
+            background-color: lightblue;
+            margin: 20px;
+            text-align: center;
+            line-height: 200px;
+        }
+
+        button {
+            margin: 5px;
+            background-color: rgb(13, 160, 209);
+        }
+    </style>
+</head>
+
+<body>
+    <div id="box">Hello From Nutan!!!</div>
+    <button id="slideUpButton">Slide Up</button>
+    <button id="slideDownButton">Slide Down</button>
+
+    <script>
+        $(document).ready(function () {
+            $("#slideUpButton").click(function () {
+                $("#box").slideUp(1000);
+            });
+
+            $("#slideDownButton").click(function () {
+                $("#box").slideDown(1000);
+            });
+        });
+    </script>
+</body>
+
+</html>

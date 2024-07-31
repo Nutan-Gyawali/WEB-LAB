@@ -1,0 +1,57 @@
+<html>
+
+<head>
+    <title>
+        NUTAN LAB2.9 Select
+    </title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        select {
+            padding: 8px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        #result {
+            font-size: 16px;
+            font-weight: bold;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+
+    <body>
+        <h1>Dropdown Example</h1>
+        <label for="cars">Choose a car:</label>
+        <select id="cars">
+            <option value="bmw">BMW</option>
+            <option value="chevrolet">Chevrolet</option>
+            <option value="rolls">Rolls Royce</option>
+            <option value="ford">Ford</option>
+        </select>
+
+        <p id="result">Selected Value: , Selected Text: </p>
+
+        <script>
+            $(document).ready(function () {
+                $('#cars').change(function () {
+                    var selectedValue = $(this).val();
+                    var selectedText = $('#cars option:selected').text();
+                    $('#result').text('Selected Value: ' + selectedValue + ', Selected Text: ' + selectedText);
+                });
+            });
+        </script>
+    </body>
+
+</html>

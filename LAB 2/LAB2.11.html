@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Chaining with slideUp and slideDown</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+
+        button {
+            margin-bottom: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        #slide-box {
+            width: 300px;
+            padding: 20px;
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <button id="toggle-button">Toggle Slide</button>
+    <div id="slide-box">Hello, I will slide up and down!</div>
+    <script>
+        $(document).ready(function () {
+            $("#toggle-button").click(function () {
+                $("#slide-box").slideUp(1000).slideDown(1000);
+            });
+        });
+
+    </script>
+</body>
+
+</html>
