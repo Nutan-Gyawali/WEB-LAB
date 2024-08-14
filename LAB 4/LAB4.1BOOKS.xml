@@ -1,0 +1,36 @@
+<books>
+    <book id='book1'>
+        <title>Harry Potter and the Philosopher's Stone</title>
+        <author>J.K. Rowling</author>
+        <isbn>01234-567-8910</isbn>
+        <publisher>Bloomsbury</publisher>
+        <edition>First</edition>
+        <price>Rs. 800</price>
+    </book>
+    <book id='book2'>
+        <title>Harry Potter and the Chamber of Secrets</title>
+        <author>J.K. Rowling</author>
+        <isbn>01234-567-8910</isbn>
+        <publisher>Bloomsbury</publisher>
+        <edition>First</edition>
+        <price>Rs. 800</price>
+    </book>
+
+    <book id='book3'>
+        <title>Harry Potter and the Prisoner of Azkaban</title>
+        <author>J.K. Rowling</author>
+        <isbn>01234-567-8911</isbn>
+        <publisher>Bloomsbury</publisher>
+        <edition>First</edition>
+        <price>Rs. 850</price>
+    </book>
+    <book id='book4'>
+        <title>Harry Potter and the Goblet of Fire</title>
+        <author>J.K. Rowling</author>
+        <isbn>01234-567-8912</isbn>
+        <publisher>Bloomsbury</publisher>
+        <edition>First</edition>
+        <price>Rs. 900</price>
+    </book>
+    
+</books>

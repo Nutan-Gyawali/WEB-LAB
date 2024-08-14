@@ -1,0 +1,25 @@
+<employees>
+    <employee >
+        <name>NUTAN GYAWALI</name>
+        <address>PEPSICOLA</address>
+        <phone>9861815910</phone>
+        <designation>Writer</designation>
+        <salary>70 </salary>
+    </employee>
+
+    <employee>
+        <name>John Doe</name>
+        <address>PEPSICOLA</address>
+        <phone>9861815911</phone>
+        <designation>Animator</designation>
+        <salary>70 </salary>
+    </employee>
+
+    <employee >
+        <name>Jane Doe</name>
+        <address>PEPSICOLA</address>
+        <phone>9861815912</phone>
+        <designation>Illustrator</designation>
+        <salary>70 </salary>
+    </employee>
+</employees>

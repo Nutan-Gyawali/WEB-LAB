@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<contacts>
+    <contact>
+        <name>James Smith</name>
+        <address>
+            <street>101 South Street</street>
+            <city>Halifax</city>
+        </address>
+        <email>james@dal.ca</email>
+        <phone>494001</phone>
+    </contact>
+    <contact>
+        <name>Tom White</name>
+        <address>
+            <street>202 Victoria Road</street>
+            <city>Dartmouth</city>
+        </address>
+        <email>tom@dal.ca</email>
+        <phone>494002</phone>
+    </contact>
+</contacts>

@@ -1,0 +1,16 @@
+.contact {
+    font-family: Arial, sans-serif;
+    margin-bottom: 20px;
+}
+
+.name {
+    font-weight: bold;
+}
+
+.email {
+    font-style: italic;
+}
+
+.phone {
+    color: red;
+}

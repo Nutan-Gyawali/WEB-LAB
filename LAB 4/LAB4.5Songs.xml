@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Songs>
+    <Song>
+        <Name>Shape of You</Name>
+        <Singer>Ed Sheeran</Singer>
+        <ComposedBy>Ed Sheeran, Steve Mac</ComposedBy>
+        <Length>3:53</Length>
+    </Song>
+    <Song>
+        <Name>Blinding Lights</Name>
+        <Singer>The Weeknd</Singer>
+        <ComposedBy>The Weeknd, Max Martin, Oscar Holter</ComposedBy>
+        <Length>3:20</Length>
+    </Song>
+    <Song>
+        <Name>Uptown Funk</Name>
+        <Singer>Mark Ronson ft. Bruno Mars</Singer>
+        <ComposedBy>Mark Ronson, Bruno Mars, Jeff Bhasker</ComposedBy>
+        <Length>4:30</Length>
+    </Song>
+    <Song>
+        <Name>Rolling in the Deep</Name>
+        <Singer>Adele</Singer>
+        <ComposedBy>Adele, Paul Epworth</ComposedBy>
+        <Length>3:48</Length>
+    </Song>
+</Songs>

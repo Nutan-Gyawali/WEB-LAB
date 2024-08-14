@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Books>
+    <Book isbn="978-3-16-148410-0">
+        <Name>
+            <FirstName>John</FirstName>
+            <MiddleName>Arthur</MiddleName>
+            <LastName>Doe</LastName>
+        </Name>
+        <Author>
+            <AuthorName>Jane Smith</AuthorName>
+            <AuthorName>Robert Brown</AuthorName>
+        </Author>
+        <PageNo>350</PageNo>
+        <Price>29.99</Price>
+    </Book>
+    <!-- Add more <Book> entries as needed -->
+</Books>
