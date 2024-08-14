@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NUTAN LAB 2.8 Cookies</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 60vh;
+            margin: 0;
+            font-family: consolas;
+            text-align: center;
+            background-color: #f4f4f4;
+        }
+
+        input[type="button"] {
+            padding: 10px 20px;
+            margin: 5px;
+            border: 5px solid black;
+            border-radius: 5px;
+            background-color: #00eaff;
+            color: white;
+            cursor: pointer;
+        }
+    </style>
+    <link rel="stylesheet" href="footer.css">
+</head>
+
+<body>
+    <div>
+        <input type="button" value="Set Cookie" onclick="setCookie()">
+        <input type="button" value="Get Cookie" onclick="getCookie()">
+        <input type="button" value="Delete Cookie" onclick="deleteCookie()">
+    </div>
+    <script>
+        function setCookie() {
+            document.cookie = "username=Nutan Gyawali";
+            alert("Cookie 'username=Nutan Gyawali' has been set.");
+        }
+        function getCookie() {
+            if (document.cookie.length != 0) {
+                alert("Cookie: " + document.cookie);
+            } else {
+                alert("Cookie not available");
+            }
+        }
+        function deleteCookie() {
+            document.cookie = "username=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+            alert("Cookie 'username' has been deleted.");
+        }
+    </script>
+</body>
+<footer>
+    Nutan Gyawali
+</footer>
+
+</html>

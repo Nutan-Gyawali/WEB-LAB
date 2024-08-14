@@ -58,6 +58,9 @@
             </div>
         </form>
     </div>
+    <div id="result">
+
+    </div>
 </body>
 <script>
     document.addEventListener('DOMContentLoaded', function () {
@@ -110,7 +113,7 @@
             if (!isValid) {
                 alert(errorMessage);
             } else {
-                form.submit(); // Submit the form if all validations pass
+                document.getElementById("result").innerText = (" SUBMITTED 👍👍👍 "); // Submit the form if all validations pass
             }
         });
     });
